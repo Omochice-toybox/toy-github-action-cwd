@@ -10,6 +10,8 @@ jobs:
     env:
       P: "${{ github.workspace }}/README.md"
     steps:
+      - name: checkout
+        uses: actions/checkout@v4
       - name: show aqua.yaml
         run: |
           pwd
