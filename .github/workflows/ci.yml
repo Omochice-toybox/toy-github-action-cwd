@@ -1,0 +1,17 @@
+name: test cwd
+
+on:
+  push:
+
+jobs:
+  check:
+    name: CWD
+    runs-on: ubuntu-latest
+    env:
+      P: "${{ github.workspace }}/README.md"
+    steps:
+      - name: show aqua.yaml
+        run: |
+          pwd
+          ls -al
+          cat "${P}"
